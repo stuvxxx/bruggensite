@@ -12,11 +12,10 @@
 
 .header-container h1 {
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .bridge-list-container {
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +26,7 @@
 
 
 .list-item-container {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,17 +34,18 @@
   margin-top: 1em;
   border: 1px solid black;
   box-sizing: border-box;
+  width: 80%;
 }
+
 
 
 .locatie {
-  background-color: rgb(250, 215, 242);
-  height: 5em;
-  width: 80%;
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
   text-align: center;
 }
 
-.locatie h3 {
+.locatie h4 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
