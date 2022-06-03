@@ -17,7 +17,6 @@ code {
 }
 
 .header-container {
-  margin: auto;
   background-color: rgb(255, 255, 255);
   width: 80%;
   height: 7rem;
@@ -32,7 +31,6 @@ code {
 
 .bridge-list-container {
   color: rgb(0, 0, 0);
-  margin: auto;
   width: 80%;
   background-color: rgb(255, 255, 255);
 }

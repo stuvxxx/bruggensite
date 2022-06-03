@@ -15,9 +15,8 @@ function BridgeList() {
 
 
 
-    function handleSearch(e) {
-        setFullList(prevFullList => prevFullList.naam === e.target.value)
-    }
+
+
     
 
     return (
@@ -26,20 +25,17 @@ function BridgeList() {
                onChange={event => {setSearchTerm(event.target.value)}}
                placeholder="zoek die brug..."
                />
-
-            
-
             <ul>
                 {fullList.filter((val) => {
                     if (searchTerm === "") {
                         return val 
-                    } else if (val.Naam.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    } else if (val.Naam.toLowerCase().includes(searchTerm.toLowerCase()) || val.Waar.toLowerCase().includes(searchTerm.toLowerCase()) ) {
                         return val
                     }
                 })
                 .map((x) => {
                     return(
-                  <BridgeListItem name={x.Naam} loc={x.Waar} link={x.Link}/>)  
+                  <BridgeListItem name={x.Naam} loc={x.Waar} link={x.Link} key={fullList.indexOf(x)}/>)  
                 })}
             </ul>
         </div>
