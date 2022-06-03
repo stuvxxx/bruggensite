@@ -57,3 +57,7 @@
 .list-item-container a {
   align-self: flex-end;
 }
+
+.input-search {
+  margin-top: 10px;
+}
