@@ -5,7 +5,6 @@ function BridgeListItem({name, loc, link}) {
         <div className="list-item-container">
             <h3>{name}</h3>
             <div className="locatie">
-            <h4>Locatie</h4>
             <p>{loc}</p>
             </div>
             <a href={link}>Foto</a>
