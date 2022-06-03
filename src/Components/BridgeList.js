@@ -25,7 +25,7 @@ function BridgeList() {
                onChange={event => {setSearchTerm(event.target.value)}}
                placeholder="zoek die brug..."
                />
-            <ul>
+            <div>
                 {fullList.filter((val) => {
                     if (searchTerm === "") {
                         return val 
@@ -37,7 +37,7 @@ function BridgeList() {
                     return(
                   <BridgeListItem name={x.Naam} loc={x.Waar} link={x.Link} key={fullList.indexOf(x)}/>)  
                 })}
-            </ul>
+            </div>
         </div>
     )
 }
