@@ -50,6 +50,7 @@
   border-radius: 20px;
   box-shadow: 5px 5px 25px -5px #000000;
   background: rgb(159,69,42);
+  list-style: none;
 }
 
 .list-item-container h3 {
@@ -80,7 +81,10 @@
 }
 
 .list-item-container a {
-  align-self: flex-end;
+  align-self: center;
+  justify-self: center;
+  list-style: none;
+  color: #000000;
 }
 
 .input-search {

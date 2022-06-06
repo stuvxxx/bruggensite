@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
 
 function BridgeListItem({name, loc, link}) {
     return (
@@ -7,7 +9,7 @@ function BridgeListItem({name, loc, link}) {
             <div className="locatie">
             <p>{loc}</p>
             </div>
-            <a href={link}>Foto</a>
+            <a href={link}><FontAwesomeIcon icon={faCamera} size="2x"/></a>
         </div>
 
     )
