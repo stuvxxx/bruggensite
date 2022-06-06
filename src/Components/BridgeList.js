@@ -6,7 +6,7 @@ import BridgeListItem from "./BridjeListItem";
 
 
 function BridgeList() {
-    const fullData = Data2.Bruggen
+    const fullData = Data.Bruggen
     const [fullList, setFullList] = useState(fullData)
     const [fullNameList, setFullNameList] = useState(fullData.map(x => x.Naam))
     const [fullLinkList, setLinkNameList] = useState(fullData.map(x => x.Link))
