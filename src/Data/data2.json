@@ -1,0 +1,23 @@
+{"Bruggen":  [
+    {
+      "Link": "https://www.bruggenvanamsterdam.nl/muntplein.htm",
+      "Naam": "Brug no. 1. Muntsluis",
+      "Waar": "in het Muntplein over het Singel in Centrum"
+    },
+    {
+      "Link": "https://www.bruggenvanamsterdam.nl/singel_hoek_leidsestraat.htm",
+      "Naam": "Brug no. 2. Heiligewegsluis",
+      "Waar": "in de Heiligeweg over het Singel in Centrum"
+    },
+    {
+      "Link": "https://www.bruggenvanamsterdam.nl/singel_bij_beulingsloot.htm",
+      "Naam": "Brug no. 3. Krijtbergbrug",
+      "Waar": "in het Singel over de Beulingsloot in Centrum"
+    },
+    {
+      "Link": "https://www.bruggenvanamsterdam.nl/singel_hoek_wijde_heisteeg.htm",
+      "Naam": "Brug no. 4. Heibrug",
+      "Waar": "in de Heisteeg over het Singel in Centrum"
+    }
+]
+}

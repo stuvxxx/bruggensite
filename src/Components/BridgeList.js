@@ -1,11 +1,12 @@
 import React, { useState } from "react";  
 import Data from "../Data/data.json"
+import Data2 from "../Data/data2.json"
 import BridgeListItem from "./BridjeListItem";
 
 
 
 function BridgeList() {
-    const fullData = Data.Bruggen
+    const fullData = Data2.Bruggen
     const [fullList, setFullList] = useState(fullData)
     const [fullNameList, setFullNameList] = useState(fullData.map(x => x.Naam))
     const [fullLinkList, setLinkNameList] = useState(fullData.map(x => x.Link))
@@ -20,13 +21,13 @@ function BridgeList() {
     
 
     return (
-        <div className="bridge-list-container">  
+        <div>
         <input type="text" 
-               onChange={event => {setSearchTerm(event.target.value)}}
-               placeholder="zoek die brug..."
-               className="input-search"
-               />
-            <div>
+        onChange={event => {setSearchTerm(event.target.value)}}
+        placeholder="zoek die brug..."
+        className="input-search"
+        />
+        <div className="bridge-list-container">  
                 {fullList.filter((val) => {
                     if (searchTerm === "") {
                         return val 
@@ -38,7 +39,7 @@ function BridgeList() {
                     return(
                   <BridgeListItem name={x.Naam} loc={x.Waar} link={x.Link} key={fullList.indexOf(x)}/>)  
                 })}
-            </div>
+        </div>
         </div>
     )
 }
