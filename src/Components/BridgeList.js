@@ -22,11 +22,13 @@ function BridgeList() {
 
     return (
         <div>
+            <div className="input-container">
         <input type="text" 
         onChange={event => {setSearchTerm(event.target.value)}}
         placeholder="zoek die brug..."
         className="input-search"
         />
+        </div>
         <div className="bridge-list-container">  
                 {fullList.filter((val) => {
                     if (searchTerm === "") {
