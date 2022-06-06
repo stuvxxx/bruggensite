@@ -11,19 +11,11 @@ function BridgeList() {
         o.isFlipped = false
         return o
     })
-
     const [fullList, setFullList] = useState(fullData)
-    const [fullNameList, setFullNameList] = useState(fullData.map(x => x.Naam))
-    const [fullLinkList, setLinkNameList] = useState(fullData.map(x => x.Link))
-    const [fullLocationList, setFullLocationList] = (fullData.map(x => x.Waar))
-
     const [searchTerm, setSearchTerm] = useState('')
 
-  //  const card = document.querySelector(".card__inner")
-  //   card.addEventListener("click", function () {
-  //       card.classList.toggle("is-flipped")})
-
-    function handleFlip(x, flipped) {
+    
+    function handleFlip(x) {
         const newArray = [...fullList]
         newArray[x].isFlipped ? newArray[x].isFlipped = false : newArray[x].isFlipped = true
         setFullList(newArray)
@@ -33,7 +25,6 @@ function BridgeList() {
     }
 
     return (
-
         <div>
             <div className="input-container">
         <input type="text" 
