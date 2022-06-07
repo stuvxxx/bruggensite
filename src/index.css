@@ -69,6 +69,7 @@ body {
   background-color: black;
 }
 
+
 .card__inner.is-flipped {
   transform: rotateY(180deg);
 }

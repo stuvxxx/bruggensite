@@ -11,7 +11,12 @@ function BridgeList() {
         o.isFlipped = false
         return o
     })
-    const [fullList, setFullList] = useState(fullData)
+
+
+ 
+
+    const [fullList, setFullList] = useState(fullData.slice(0,6))
+    const [shortlist, setShortlist] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
 
     
@@ -23,6 +28,8 @@ function BridgeList() {
         const card = document.getElementById(x)
         card.classList.toggle("is-flipped")
     }
+
+
 
     return (
         <div>
