@@ -14,7 +14,7 @@ function BridgeList() {
 
  
 
-    const [fullList, setFullList] = useState(fullData.slice(0,6))
+    const [fullList, setFullList] = useState(fullData.slice(0,100))
     const [searchTerm, setSearchTerm] = useState('')
 
     
