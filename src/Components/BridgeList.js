@@ -1,6 +1,5 @@
 import React, { useState } from "react";  
 import Data from "../Data/data.json"
-import Data2 from "../Data/data2.json"
 import BridgeListItem from "./BridjeListItem";
 
 
@@ -16,7 +15,6 @@ function BridgeList() {
  
 
     const [fullList, setFullList] = useState(fullData.slice(0,6))
-    const [shortlist, setShortlist] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
 
     
