@@ -176,7 +176,7 @@ body {
   border-radius: 5%;
 }
 
-/*.logos {
+.logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,4 +206,4 @@ body {
 
 .input-search {
   margin-top: 10px;
-} */
+} 
