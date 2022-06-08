@@ -140,7 +140,9 @@ body {
 
 .card__face--back {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 
 .card__content {
