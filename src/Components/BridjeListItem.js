@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCamera } from '@fortawesome/free-solid-svg-icons'
+import { faCamera, faXmarksLines } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -16,6 +16,10 @@ function BridgeListItem({name, loc, handleFlip, id}) {
                     <div className="card__body">
                         <p>{loc}</p>
                     </div>
+                    <div className="logos">
+                        <FontAwesomeIcon className="icon1" icon={faCamera}/>
+                        <FontAwesomeIcon className="icon2" icon={faXmarksLines}/>
+                    </div>
                 </div>
                 </div>
                 <div className="card__face card__face--back">
@@ -27,6 +31,10 @@ function BridgeListItem({name, loc, handleFlip, id}) {
                             <h2>Not rated</h2>
                             <p>Hold to add info and save into collection!</p>
                         </div>
+                        <div className="logos">
+                        <FontAwesomeIcon className="icon1" icon={faCamera}/>
+                        <FontAwesomeIcon className="icon2" icon={faXmarksLines}/>
+                    </div>
                     </div>
                 </div>
             </div>
