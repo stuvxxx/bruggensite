@@ -4,7 +4,7 @@ import { faCamera, faXmarksLines } from '@fortawesome/free-solid-svg-icons'
 
 
 
-function BridgeListItem({name, loc, handleFlip, id}) {
+function BridgeListItem({name, loc, handleFlip, id, link}) {
     return (
         <div className="card" onClick={() => handleFlip(id)}>
             <div id={id} className="card__inner">
@@ -17,8 +17,10 @@ function BridgeListItem({name, loc, handleFlip, id}) {
                         <p>{loc}</p>
                     </div>
                     <div className="logos">
+                    <a href={link}>
                         <FontAwesomeIcon className="icon1" icon={faCamera}/>
-                        <FontAwesomeIcon className="icon2" icon={faXmarksLines}/>
+                    </a>
+                    <FontAwesomeIcon className="icon2" icon={faXmarksLines}/>
                     </div>
                 </div>
                 </div>
@@ -32,11 +34,15 @@ function BridgeListItem({name, loc, handleFlip, id}) {
                             <p>Hold to add info and save into collection!</p>
                         </div>
                         <div className="logos">
-                        <FontAwesomeIcon className="icon1" icon={faCamera}/>
+                        <a href={link}>
+                            <FontAwesomeIcon className="icon1" icon={faCamera}/>
+                        </a>
                         <FontAwesomeIcon className="icon2" icon={faXmarksLines}/>
                     </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     )
