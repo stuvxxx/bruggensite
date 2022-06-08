@@ -23,6 +23,9 @@ function Header() {
                    startende Front-End developer. 
                    Voor meer info zie:contact hieronder!
                    <br></br>
+                   <br></br>
+                   <br></br>
+                   <br></br>
                    Marc Zwiers
                 </p>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";  
 import Data from "../Data/data.json"
 import BridgeListItem from "./BridjeListItem";
+import Nav from "./Nav";
 
 
 
@@ -30,7 +31,9 @@ function BridgeList() {
 
 
     return (
+        
         <div>
+            <Nav />
             <div className="input-container">
         <input type="text" 
         onChange={event => {setSearchTerm(event.target.value)}}
