@@ -32,7 +32,7 @@ function BridgeList() {
 
     return (
         
-        <div>
+        <div className="wrapper">
             <Nav />
             <div className="input-container">
         <input type="text" 
