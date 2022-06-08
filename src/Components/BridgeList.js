@@ -1,7 +1,6 @@
 import React, { useState } from "react";  
 import Data from "../Data/data.json"
 import BridgeListItem from "./BridjeListItem";
-import Nav from "./Nav";
 
 
 
@@ -15,7 +14,7 @@ function BridgeList() {
 
  
 
-    const [fullList, setFullList] = useState(fullData.slice(0,2))
+    const [fullList, setFullList] = useState(fullData.slice(0,50))
     const [searchTerm, setSearchTerm] = useState('')
 
     
@@ -31,9 +30,7 @@ function BridgeList() {
 
 
     return (
-        
-        <div className="wrapper">
-            <Nav />
+        <div>
             <div className="input-container">
         <input type="text" 
         onChange={event => {setSearchTerm(event.target.value)}}
@@ -62,7 +59,7 @@ function BridgeList() {
                   />)  
                 })}
         </div>
-        </div>
+    </div>
     )
 }
 

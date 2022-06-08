@@ -1,13 +1,26 @@
+import React from "react";
+import Nav from "./Components/Nav";
 import Header from "./Components/Header";
 import BridgeList from "./Components/BridgeList";
+import Contact from "./Components/Contact";
+import Collection from "./Components/Collection";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 
 function Main() {
   return (
-    <div className="wrapper">
-    <Header/>
-    <BridgeList />
-    </div>
+    <Router>
+      <div className="wrapper">
+        <Header/>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<BridgeList />}/>
+          <Route path="/collection" element={<Collection />}/>
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
