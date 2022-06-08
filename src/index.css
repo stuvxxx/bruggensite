@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
 
 :root {
@@ -40,13 +47,55 @@ body {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (120fr)[2];
   grid-template-columns: repeat(2, 120fr);
+  -ms-grid-rows: (200fr)[4];
   grid-template-rows: repeat(4, 200fr);
   grid-auto-flow: row;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   background-color: #2c302d;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.bridge-list-container > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.bridge-list-container > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.bridge-list-container > *:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.bridge-list-container > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.bridge-list-container > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.bridge-list-container > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.bridge-list-container > *:nth-child(7) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+.bridge-list-container > *:nth-child(8) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
 }
 
 
@@ -65,7 +114,8 @@ body {
   -webkit-perspective: 1000px;
           perspective: 1000px;
           border-radius: 10px;
-          box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+          -webkit-box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+                  box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
 }
 
 .card__inner {
@@ -169,10 +219,19 @@ body {
 }
 
 .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .icon1 {
