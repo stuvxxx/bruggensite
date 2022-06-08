@@ -47,9 +47,7 @@ body {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (120fr)[2];
   grid-template-columns: repeat(2, 120fr);
-  -ms-grid-rows: (200fr)[4];
   grid-template-rows: repeat(4, 200fr);
   grid-auto-flow: row;
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -58,45 +56,6 @@ body {
           box-sizing: border-box;
 }
 
-.bridge-list-container > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.bridge-list-container > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-}
-
-.bridge-list-container > *:nth-child(3) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-
-.bridge-list-container > *:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-}
-
-.bridge-list-container > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
-.bridge-list-container > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-}
-
-.bridge-list-container > *:nth-child(7) {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-}
-
-.bridge-list-container > *:nth-child(8) {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-}
 
 
 .card {
