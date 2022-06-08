@@ -1,9 +1,5 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.12,
-* Autoprefixer: v10.4.4
-* Browsers: last 4 version
-*/
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
 
@@ -24,17 +20,39 @@ body {
 }
 
 .header-container {
-  margin: 0 auto;
-  height: 7rem;
+  height: 80vh;
+  background: url("brug2.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
 }
 
-.header-container h1 {
-  text-align: center;
-  font-size: 4em;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  padding-top: 1rem;
-  color: #ffffff;
+.text-container {
+  max-height: min-content;
+  background-color: #00000094;
+  padding-top: 100px; 
 }
+
+
+.text-container h1 {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 40px;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+.text-container p {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+
 
 
 .input-container {
@@ -207,3 +225,4 @@ body {
 .input-search {
   margin-top: 10px;
 } 
+
