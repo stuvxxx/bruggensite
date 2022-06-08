@@ -66,15 +66,14 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   margin-top: 10px;
   -webkit-perspective: 1000px;
-          perspective: 1000px;
-          border-radius: 10px;
-          -webkit-box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
-                  box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+  perspective: 1000px;
+  border-radius: 10px;
+
 }
 
 .card__inner {
@@ -86,17 +85,19 @@ body {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+  box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
 }
 
 
 .card__inner.is-flipped {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card__face {
