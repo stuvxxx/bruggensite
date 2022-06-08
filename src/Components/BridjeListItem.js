@@ -20,6 +20,7 @@ function BridgeListItem({name, loc, handleFlip, id, link}) {
                     <a href={link}>
                         <FontAwesomeIcon className="icon1" icon={faCamera}/>
                     </a>
+                    <FontAwesomeIcon className="icon3" icon={faXmarksLines}/>
                     <FontAwesomeIcon onClick={() => handleFlip(id)} className="icon2" icon={faRotate}/>
                     </div>
                 </div>
@@ -37,6 +38,7 @@ function BridgeListItem({name, loc, handleFlip, id, link}) {
                         <a href={link}>
                             <FontAwesomeIcon className="icon1" icon={faCamera}/>
                         </a>
+                        <FontAwesomeIcon className="icon3" icon={faXmarksLines}/>
                         <FontAwesomeIcon onClick={() => handleFlip(id)} className="icon2" icon={faRotate}/>
                     </div>
                     </div>
