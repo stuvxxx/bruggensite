@@ -57,7 +57,7 @@ body {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 120fr);
+  grid-template-columns: repeat(6, 120fr);
   grid-template-rows: repeat(4, 200fr);
   grid-auto-flow: row;
   grid-row-gap: 20px;
@@ -288,4 +288,33 @@ margin-right: 0;
 .contact-wrapper h1 {
   text-align: center;
   padding-top: 200px;
+}
+@media only screen and (max-width: 1200px) {
+  .bridge-list-container {
+    grid-template-columns: repeat(6, 120fr);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bridge-list-container {
+    grid-template-columns: repeat(5, 120fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .bridge-list-container {
+    grid-template-columns: repeat(4, 120fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bridge-list-container {
+    grid-template-columns: repeat(3, 120fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bridge-list-container {
+    grid-template-columns: repeat(2, 120fr);
+  }
 }
