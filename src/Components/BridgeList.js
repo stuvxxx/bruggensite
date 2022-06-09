@@ -11,7 +11,9 @@ function BridgeList() {
         return o
     })
 
-    const [fullList, setFullList] = useState(fullData.slice(0,50))
+    const [nbmToShow, setnbmToShow] = useState(50)
+    const [fullList, setFullList] = useState(fullData.slice(0, 50))
+
 
 
     
@@ -28,14 +30,22 @@ function BridgeList() {
         fullData.filter((val) => {
             if ( e === "") {
                 setFullList(fullData.slice(0,50))
-            } else if (val.Naam.toLowerCase().includes(e.toLowerCase()) || val.Waar.toLowerCase().includes(e.toLowerCase()) ) {
+            } 
+            if (val.Naam.toLowerCase().includes(e.toLowerCase()) || val.Waar.toLowerCase().includes(e.toLowerCase()) ) {
                 newArray.push(val)
-                setFullList(newArray.slice(0,50))
             }
+            setFullList(newArray.slice(0,50))
         })
     }
 
-
+    window.onscroll = function(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && fullList.length > 49) {
+          setnbmToShow(prevState => {
+              return prevState + 50
+          })
+          setFullList(fullData.slice(0, nbmToShow))
+        }
+    };
 
     return (
         <div>
