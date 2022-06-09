@@ -39,8 +39,10 @@ function BridgeList() {
     }
 
     window.onscroll = function(ev) {
-        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && fullList.length > 49) {
-          setnbmToShow(prevState => {
+        if ((window.innerHeight + window.scrollY ) >= (document.body.scrollHeight - 200) && fullList.length > 49) {
+            console.log(window.innerHeight)
+            console.log(document.body.scrollHeight)
+            setnbmToShow(prevState => {
               return prevState + 50
           })
           setFullList(fullData.slice(0, nbmToShow))
