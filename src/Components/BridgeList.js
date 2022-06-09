@@ -19,9 +19,20 @@ function BridgeList() {
         const newArray = [...fullList]
         newArray[x].isFlipped ? newArray[x].isFlipped = false : newArray[x].isFlipped = true
         setFullList(newArray)
-
         const card = document.getElementById(x)
         card.classList.toggle("is-flipped")
+    }
+
+    function handleSearch(e) {
+        let newArray = []
+        fullData.filter((val) => {
+            if ( e === "") {
+                setFullList(fullData.slice(0,50))
+            } else if (val.Naam.toLowerCase().includes(e.toLowerCase()) || val.Waar.toLowerCase().includes(e.toLowerCase()) ) {
+                newArray.push(val)
+                setFullList(newArray.slice(0,50))
+            }
+        })
     }
 
 
@@ -30,20 +41,13 @@ function BridgeList() {
         <div>
             <div className="input-container">
         <input type="text" 
-        onChange={event => {setSearchTerm(event.target.value)}}
+        onChange={event => {handleSearch(event.target.value)}}
         placeholder="zoek die brug..."
         className="input-search"
         />
         </div>
         <div className="bridge-list-container">  
-                {fullList.filter((val) => {
-                    if (searchTerm === "") {
-                        return val 
-                    } else if (val.Naam.toLowerCase().includes(searchTerm.toLowerCase()) || val.Waar.toLowerCase().includes(searchTerm.toLowerCase()) ) {
-                        return val
-                    }
-                })
-                .map((x) => {
+                {fullList.map((x) => {
                     return(
                   <BridgeListItem 
                   name={x.Naam} 
