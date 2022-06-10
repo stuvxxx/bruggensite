@@ -82,8 +82,8 @@ function Rate(props) {
                 />
             </div>
             <div className='btn-container'>
-              <button className="btn add">Voeg toe aan collectie</button>
               <button className="btn cancel">Annulée</button>
+              <button className="btn add">Voeg toe aan collectie</button>
             </div>
             </form>
 
