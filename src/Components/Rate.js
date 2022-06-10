@@ -6,9 +6,9 @@ import { useState } from "react"
 function Rate(props) {
 
 
-  const [chill, setChill] = useState("1")
-  const [beauty, setBeauty] = useState("1")
-  const [memory, setMemory] = useState("1")
+  const [chill, setChill] = useState("")
+  const [beauty, setBeauty] = useState("")
+  const [memory, setMemory] = useState("")
   const [comment, setComment] = useState("")
 
   const handleSubmit = (e) => {
