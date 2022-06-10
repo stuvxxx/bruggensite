@@ -4,14 +4,14 @@ import { faCamera, faXmarksLines, faRotate} from '@fortawesome/free-solid-svg-ic
 
 
 
-function BridgeListItem({name, loc, handleFlip, id, link}) {
+function BridgeListItem({name, loc, handleFlip, id, link, handleAdd}) {
     return (
         <div className="card">
             <div id={id} className="card__inner">
                 <div className="card__face card__face--front">
                     <div className="card__content">
                     <div className="card__header">
-                        <h1>{name}</h1>
+                        <h1 onClick={() => handleAdd(name, id)}>{name}</h1>
                     </div>
                     <div className="card__body">
                         <p>{loc}</p>

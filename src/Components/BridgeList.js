@@ -1,6 +1,7 @@
 import React, { useState } from "react";  
 import Data from "../Data/data.json"
 import BridgeListItem from "./BridjeListItem";
+import Rate from "./Rate";
 
 
 
@@ -11,6 +12,8 @@ function BridgeList() {
         return o
     })
 
+    const [isActive, setActive] = useState("false")
+    const [cardTitle, setCardTitle] = useState("")
     const [nbmToShow, setnbmToShow] = useState(50)
     const [fullList, setFullList] = useState(fullData.slice(0, 50))
 
@@ -38,6 +41,10 @@ function BridgeList() {
         })
     }
 
+    function handleRate(rating) {
+        console.log(rating)
+    }
+
     window.onscroll = function(ev) {
         if ((window.innerHeight + window.scrollY ) >= (document.body.scrollHeight - 200) && fullList.length > 49) {
             console.log(window.innerHeight)
@@ -49,6 +56,14 @@ function BridgeList() {
         }
     };
 
+    function handleAdd(title, id) {
+        console.log("rdy to add: " + title + " " + id)
+        setActive(!isActive)
+        setCardTitle(title)
+    }
+
+
+
     return (
         <div>
             <div className="input-container">
@@ -56,6 +71,12 @@ function BridgeList() {
         onChange={event => {handleSearch(event.target.value)}}
         placeholder="zoek die brug..."
         className="input-search"
+        />
+        </div>
+        <div className={isActive ? "rate-no-show" : "rate-show"}>
+        <Rate 
+        handleRate={handleRate}
+        title={cardTitle}
         />
         </div>
         <div className="bridge-list-container">  
@@ -69,6 +90,7 @@ function BridgeList() {
                   id={fullList.indexOf(x)}
                   handleFlip={handleFlip}
                   flipped={fullList[fullList.indexOf(x)].isFlipped}
+                  handleAdd={handleAdd}
                   />)  
                 })}
         </div>

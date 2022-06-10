@@ -15,12 +15,9 @@ function Main() {
       <div className="wrapper">
         <Header/>
         <Nav />
+
         <Routes>
           <Route path="/" element={<BridgeList />}/>
-            <Route path='/rate' element={<Rate />}>
-                  <Route path=":rateid" element={<Rate />}>
-            </Route>
-          </Route>
           <Route path="/collection" element={<Collection />}/>
           <Route path="/contact" element={<Contact />}/>
         </Routes>
@@ -30,3 +27,7 @@ function Main() {
 }
 
 export default Main;
+// <Route path='/rate' element={<Rate />}>
+// <Route path=":rateid" element={<Rate />}>
+// </Route>
+// </Route>
