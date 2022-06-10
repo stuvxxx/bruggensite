@@ -29,7 +29,7 @@ function Rate(props) {
             <div className="rate-form-container">
               <form onSubmit={handleSubmit}>
                 <div className='select-container'>
-                  <label> Hoe chill is deze brug?
+                  <label> chillfactor
                 <select
                   value={chill}
                   onChange={(e) => setChill(e.target.value)}
@@ -44,7 +44,7 @@ function Rate(props) {
             </label>
             </div>
             <div className='select-container'>
-            <label> Hoe chill is deze brug?
+            <label> schoonheidsfactor
             <select
             value={beauty}
             onChange={(e) => setBeauty(e.target.value)}
@@ -59,7 +59,7 @@ function Rate(props) {
             </label>
             </div>
             <div className='select-container'>
-            <label> Hoe chill is deze brug?
+            <label> uitzichtfactor
             <select
             value={memory}
             onChange={(e) => setMemory(e.target.value)}
