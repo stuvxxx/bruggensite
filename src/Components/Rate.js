@@ -34,7 +34,7 @@ function Rate(props) {
                   value={chill}
                   onChange={(e) => setChill(e.target.value)}
             > 
-          <option>Click to add stars</option>
+          <option value="default">Click to add stars</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -49,7 +49,7 @@ function Rate(props) {
             value={beauty}
             onChange={(e) => setBeauty(e.target.value)}
             >
-          <option>Click to add stars</option>
+          <option value="default">Click to add stars</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -64,7 +64,7 @@ function Rate(props) {
             value={memory}
             onChange={(e) => setMemory(e.target.value)}
             >
-          <option>Click to add stars</option>
+          <option value="default">Click to add stars</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -82,8 +82,8 @@ function Rate(props) {
                 />
             </div>
             <div className='btn-container'>
-              <button className="btn cancel">Annulée</button>
-              <button className="btn add">Voeg toe aan collectie</button>
+              <button className="btn-cancel">Annulée</button>
+              <button className="btn-add">Voeg toe aan collectie</button>
             </div>
             </form>
 

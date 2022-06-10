@@ -423,7 +423,7 @@ display: none;
   flex-direction: column;
 }
 
-.btn {
+.btn-add {
     background-color:transparent;
     border-radius:28px;
     border:1px solid #000000;
@@ -433,9 +433,25 @@ display: none;
     font-size:12px;
     padding:12px 21px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #000000;
+    text-shadow:0px 1px 0px #00e913;
     margin: 10px;
+    letter-spacing: 2px;
   }
+
+.btn-cancel {
+  background-color:transparent;
+  border-radius:28px;
+  border:1px solid #000000;
+  cursor:pointer;
+  color:#000000;
+  font-family:var(--cardFont);
+  font-size:12px;
+  padding:12px 21px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #e90000ab;
+  margin: 10px;
+  letter-spacing: 2px;
+}
 
 
 .btn:hover {
