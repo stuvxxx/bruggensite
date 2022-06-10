@@ -78,8 +78,7 @@ function Rate(props) {
                 type="textarea"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                placeholder="Opmerking! ...misschien staat ie op instortend
-                of is je pruik in het water gewaaid..."
+                placeholder="Opmerking! Misschien staat ie op instortend of is je pruik in het water gewaaid... kijk maar ff"
                 />
             </div>
             <div className='btn-container'>
