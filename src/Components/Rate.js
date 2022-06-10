@@ -34,7 +34,7 @@ function Rate(props) {
                   value={chill}
                   onChange={(e) => setChill(e.target.value)}
             > 
-          <option value="default">Click to add stars</option>
+          <option value="default">Voeg wat dikke sterren toe</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -49,7 +49,7 @@ function Rate(props) {
             value={beauty}
             onChange={(e) => setBeauty(e.target.value)}
             >
-          <option value="default">Click to add stars</option>
+          <option value="default">Hier ook</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -64,7 +64,7 @@ function Rate(props) {
             value={memory}
             onChange={(e) => setMemory(e.target.value)}
             >
-          <option value="default">Click to add stars</option>
+          <option value="default">En hier!</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -78,7 +78,8 @@ function Rate(props) {
                 type="textarea"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                placeholder="Extra opmerking -- max 160 --"
+                placeholder="Opmerking! ...misschien staat ie op instortend
+                of is je pruik in het water gewaaid..."
                 />
             </div>
             <div className='btn-container'>
