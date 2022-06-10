@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
 
 :root {
-  --dark: #000000;
-  --primary: #551c15;
-  --light: #136429;
+  --card1: #e6e1e1;
+  --card2: #ff1f01;
+  --cardtext: #000000;
+  --cornerIcon: #000000;
+  --background: linear-gradient(to right, #2C302D 0%, #3b6440 100%);
 }
 
 * {
@@ -33,7 +35,6 @@ body {
 
 .text-container h1 {
   color: #ffffff;
-  font-family: monospace;
   font-size: 40px;
   padding: 10px 10px 10px 10px;
   letter-spacing: 20px;
@@ -42,9 +43,9 @@ body {
 
 .text-container p {
   color: #ffffffe3;
-  font-family: monospace;
   font-size: 20px;
   padding: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .input-container {
@@ -62,7 +63,7 @@ body {
   grid-auto-flow: row;
   grid-row-gap: 20px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-color: #2c302d;
+  background-color: var(--background);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -138,7 +139,7 @@ body {
 }
 
 .card__content {
-  background-color: #000000;
+  background-color: var(--card1);
   width: 100%;
   height: 100%;
   -ms-grid-columns: 140px;
@@ -149,7 +150,7 @@ body {
 }
 
 .card__header {
-  color: #ffffff;
+  color: var(--cardtext);
   height: 65px;
   width: 140px;
   position: relative;
@@ -181,8 +182,8 @@ body {
   text-align: center;
   padding: 15px 5px 0px 5px;
   font-size: 14px;
-  background-color: #000000;
-  color: white;
+  background-color: var(--card1);
+  color: var(--cardtext);
   border-radius: 5%;
 }
 
@@ -203,19 +204,19 @@ body {
 }
 
 .icon1 {
-  color: rgba(255, 255, 255, 0.678);
+  color: var(--cornerIcon);
   margin-left: 10px;
   padding-top: 10px;
 }
 
 .icon2 {
-  color: rgba(255, 255, 255, 0.678);
+  color: var(--cornerIcon);
   margin-right: 10px;
   padding-top: 10px;
 }
 
 .icon3 {
-  color: rgba(255, 255, 255, 0.199);
+  color: rgba(0, 0, 0, 0.466);
   padding-top:10px
 }
 
@@ -278,8 +279,6 @@ margin-right: 0;
   padding-top: 200px;
 }
 
-
-
 .contact-wrapper {
   height: 100vh;
   margin: 0 auto;
@@ -288,6 +287,16 @@ margin-right: 0;
 .contact-wrapper h1 {
   text-align: center;
   padding-top: 200px;
+}
+
+.rate {
+  position: absolute;
+  background-color: #551c15;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 1200px) {
   .bridge-list-container {
