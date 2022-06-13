@@ -17,6 +17,8 @@ function BridgeList() {
     const [nbmToShow, setnbmToShow] = useState(50)
     const [fullList, setFullList] = useState(fullData.slice(0, 50))
 
+    const [collection, setCollection] = useState("")
+
 
 
     
@@ -75,8 +77,8 @@ function BridgeList() {
         </div>
         <div className={isActive ? "rate-no-show" : "rate-show"}>
         <Rate 
-        handleRate={handleRate}
-        title={cardTitle}
+            handleRate={handleRate}
+            title={cardTitle}
         />
         </div>
         <div className="bridge-list-container">  
