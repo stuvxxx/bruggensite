@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera, faXmarksLines, faRotate} from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
+import { Link } from "react-router-dom"
+
+
+
 
 function Rate(props) {
 
@@ -10,12 +14,26 @@ function Rate(props) {
   const [beauty, setBeauty] = useState("")
   const [memory, setMemory] = useState("")
   const [comment, setComment] = useState("")
+  const [inCollection, setInCollection] = useState(true)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const rating = { chill, beauty, memory, comment }
-    props.handleRate(rating)
+    const rating = { chill, beauty, memory, comment, inCollection }
+    props.handleRate(rating, props.id)
+    setChill("")
+    setBeauty("")
+    setMemory("")
+    setComment("")
 }
+
+  const handleCancel = () => {
+    console.log("cancel!")
+      setChill("")
+      setBeauty("")
+      setMemory("")
+      setComment("")
+      props.handleActive()
+  }
 
 
 
@@ -34,7 +52,7 @@ function Rate(props) {
                   value={chill}
                   onChange={(e) => setChill(e.target.value)}
             > 
-          <option value="default">Voeg wat dikke sterren toe</option>
+          <option value="default">-- pick stars --</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -49,7 +67,7 @@ function Rate(props) {
             value={beauty}
             onChange={(e) => setBeauty(e.target.value)}
             >
-          <option value="default">Hier ook</option>
+          <option value="default">-- pick stars --</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -64,7 +82,7 @@ function Rate(props) {
             value={memory}
             onChange={(e) => setMemory(e.target.value)}
             >
-          <option value="default">En hier!</option>
+          <option value="default">-- pick stars --</option>
                 <option value="★">★</option>
                 <option value="★★">★★</option>
                 <option value="★★★">★★★</option>
@@ -82,11 +100,10 @@ function Rate(props) {
                 />
             </div>
             <div className='btn-container'>
-              <button className="btn-cancel">Annulée</button>
-              <button className="btn-add">Voeg toe aan collectie</button>
+              <button type='reset' onClick={() => {handleCancel()}} className="btn-cancel">Annulée</button>
+              <button type='submit' className="btn-add">Voeg toe aan collectie</button>
             </div>
             </form>
-
             </div>
         </div>
       </div>

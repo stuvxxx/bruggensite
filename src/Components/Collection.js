@@ -1,9 +1,25 @@
 import React from 'react'
+import Data from "../Data/data.json"
+import CollectionItem from './CollectionItem'
 
-const Collection = () => {
+function Collection(props) {
+
+  const fullData = Data.Bruggen
+  const collection = props.collection
+  console.log(collection)
+  console.log(fullData)
+
+
   return (
-    <div className='collection-wrapper'>
-      <h1>NIKSNOGHIERYO!</h1>
+    <div>
+        <div className="bridge-list-container">  
+            {fullData.map((x) => {
+                return(
+              <CollectionItem
+                name={x.Naam} 
+              />)  
+            })}
+        </div>
     </div>
   )
 }

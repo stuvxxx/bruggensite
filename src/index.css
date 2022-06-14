@@ -226,6 +226,37 @@ body {
   margin-top: 10px;
 } 
 
+
+.empty-card {
+  background-color: #00000000;
+  margin: auto 0;
+  width: 140px;
+  height: 200px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  margin-top: 10px;
+  border: 3px black dotted;
+  display: flex;
+  justify-content: center;
+  opacity: 50%;
+}
+
+.inner-empty-card {
+  border: 3px black dotted;
+  margin: auto 0;
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.inner-empty-card p {
+  padding-top: 25%;
+  font-family: var(--cardFont);
+}
+
 nav {
   width: fit-content;
   margin: 0 auto;
@@ -301,9 +332,9 @@ margin-right: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
   height: 80%;
   width: 70%;
+  z-index: -10;
   border-radius: 5%;
   visibility: hidden;
   -webkit-transition: visibility 1s linear;
@@ -320,9 +351,9 @@ margin-right: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   height: 80%;
   width: 70%;
+  z-index: 2;
   border-radius: 5%;
   visibility:visible;
   -webkit-transition: visibility 1s linear;
