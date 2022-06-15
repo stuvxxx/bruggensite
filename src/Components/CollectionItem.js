@@ -1,10 +1,10 @@
 import React from "react";
 
-function CollectionItem(props) {
+function CollectionItem() {
     return (
-            <div className="empty-card">
-                <div className="inner-empty-card">
-                    <p>{props.name}</p>
+            <div className="collected-card">
+                <div>
+                    <p>working!</p>
                 </div>
             </div>
     )

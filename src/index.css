@@ -228,7 +228,22 @@ body {
 
 
 .empty-card {
-  background-color: #00000000;
+  margin: auto 0;
+  width: 140px;
+  height: 200px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  margin-top: 10px;
+  border: 3px black dotted;
+  display: flex;
+  justify-content: center;
+  opacity: 50%;
+}
+
+.collected-card {
+  background-color: #e6e1e1;
   margin: auto 0;
   width: 140px;
   height: 200px;
@@ -256,6 +271,36 @@ body {
   padding-top: 25%;
   font-family: var(--cardFont);
 }
+
+.collected-card-visible {
+  background-color: white;
+  margin: auto 0;
+  width: 140px;
+  height: 200px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.collected-card-invisible {
+  background-color: white;
+  margin: auto 0;
+  width: 140px;
+  height: 200px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  
+}
+
 
 nav {
   width: fit-content;
@@ -494,6 +539,8 @@ display: none;
   position:relative;
   top:1px;
 }
+
+
 
 
 @media only screen and (max-width: 1200px) {
