@@ -4,8 +4,9 @@ import { faCamera, faXmarksLines, faRotate} from '@fortawesome/free-solid-svg-ic
 
 
 
-function BridgeListItem({name, loc, handleFlip, id, link, handleAdd, inCollection}) {
+function BridgeListItem({name, loc, handleFlip, id, link, handleAdd, inCollection, chill}) {
     return (
+
         <div className="card">
             <div id={id} className="card__inner">
                 <div className="card__face card__face--front">
@@ -31,8 +32,8 @@ function BridgeListItem({name, loc, handleFlip, id, link, handleAdd, inCollectio
                             <h1>{name}</h1>
                         </div>
                         <div className="card__body">
-                            <h2>Not rated</h2>
-                            <p>Hold to add info and save into collection!</p>
+                            <h2 style={chill ? {color: "green"} : {color: "red"}}>{chill ? "Zit in je collectie!" : "Niet in collectie"}</h2>
+                            <p>{chill ? "" : "Zoek de brug en voeg toe aan collectie!"}</p>
                         </div>
                         <div className="logos">
                         <a href={link}>

@@ -6,13 +6,13 @@ function Nav() {
     return(
     <nav>
         <ul>
-          <Link to="/">
+          <Link style={{ textDecoration: 'none' }} to="/">
             <li>Alle Bruggen</li>
           </Link>
-          <Link  to="/collection">
+          <Link style={{ textDecoration: 'none' }}  to="/collection">
             <li>Mijn collectie</li>
           </Link>
-          <Link  to="/contact">
+          <Link style={{ textDecoration: 'none' }}  to="/contact">
             <li>Contact</li>
           </Link>
         </ul>

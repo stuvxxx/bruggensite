@@ -48,7 +48,6 @@ function BridgeList(props) {
         if (rating.chill !== "" && rating.beauty !== "" && rating.memory !== "") {
         const cardToRate = fullData.find(x => id === x.id)
         const ratedCard = Object.assign(cardToRate, rating)
-        console.log(ratedCard)
         fullList[id] = ratedCard
         console.log(fullList)
         const newArray = [...inCollection]
@@ -87,10 +86,13 @@ function BridgeList(props) {
         props.func(inCollection, fullData)
     })
 
+
+
     return (
         <div>
         <div className="input-container">
-        <input type="text" 
+        <input  
+        type="text"        
         onChange={event => {handleSearch(event.target.value)}}
         placeholder="zoek die brug..."
         className="input-search"
@@ -98,10 +100,10 @@ function BridgeList(props) {
         </div>
         <div className={isActive ? "rate-no-show" : "rate-show"}>
         <Rate 
-            handleRate={handleRate}
-            title={cardTitle}
-            id={cardId}
-            handleActive={handleActive}
+        handleRate={handleRate}
+        title={cardTitle}
+        id={cardId}
+        handleActive={handleActive}
         />
         </div>
         <div className="bridge-list-container">  
@@ -117,6 +119,7 @@ function BridgeList(props) {
                   handleFlip={handleFlip}
                   flipped={fullList[fullList.indexOf(x)].isFlipped}
                   handleAdd={handleAdd}
+                  chill={x.chill}
                   />)  
                 })}
         </div>

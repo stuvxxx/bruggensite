@@ -14,11 +14,12 @@ function Rate(props) {
   const [beauty, setBeauty] = useState("")
   const [memory, setMemory] = useState("")
   const [comment, setComment] = useState("")
-  const [inCollection, setInCollection] = useState(true)
+  const [inCollection] = useState(true)
+  const [isSeen] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const rating = { chill, beauty, memory, comment, inCollection }
+    const rating = { chill, beauty, memory, comment, inCollection, isSeen }
     props.handleRate(rating, props.id)
     setChill("")
     setBeauty("")

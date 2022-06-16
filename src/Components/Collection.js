@@ -4,17 +4,12 @@ import CollectionItem from './CollectionItem'
 import EmptyCollectionItem from './EmptyCollectionItem'
 
 function Collection(props) {
-
   const fullData = Data.Bruggen
   const collection = props.collection
-  console.log(collection)
-  console.log(fullData)
 
   for (let x = 0; x < collection.length; x++) {
     fullData[collection[x].id] = collection[x]
   }
-
-  console.log(fullData)
   
 
   return (
@@ -29,7 +24,16 @@ function Collection(props) {
               />)
               else {
                 return (
-              <CollectionItem/>
+              <CollectionItem
+                name={x.Naam}
+                onClick={props.handleSee}
+                index={collection.indexOf(x)}
+                seen={x.isSeen}
+                beauty={x.beauty}
+                chill={x.chill}
+                uitzicht={x.memory}
+                comment={x.comment}
+                />
                 )
               }  
             })}

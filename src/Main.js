@@ -17,7 +17,21 @@ function Main() {
 
     function pullData(collection) {
       setCollection(collection)
+      console.log(collection)
     }
+
+    function handleSee(name, index) {
+      if (document.getElementById(name).className === "collected-card-unseen"){
+      document.getElementById(name).className = "collected-card-seen"
+      const seenCard = collection.find(x => x.Naam === name)
+      seenCard.isSeen = true
+      collection[index] = seenCard
+      setCollection(collection) }
+      else {
+      console.log("Some action!")}
+    }
+
+
 
   return (
     <Router>
@@ -25,8 +39,11 @@ function Main() {
         <Header/>
         <Nav />
         <Routes>
-          <Route path="/" element={<BridgeList func={pullData} />}/>
-          <Route path="/collection" element={<Collection collection={collection} />}/>
+          <Route path="/" element={<BridgeList collection={collection} func={pullData} />}/>
+          <Route path="/collection" element={<Collection collection={collection}
+                                                         handleSee={handleSee}        
+                                                                 />}
+          />
           <Route path="/contact" element={<Contact />}/>
         </Routes>
       </div>

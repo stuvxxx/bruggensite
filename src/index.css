@@ -37,24 +37,24 @@ body {
 }
 
 .text-container h1 {
+  font-family: var(--mainFont);
   color: #ffffff;
   font-size: 40px;
   padding: 10px 10px 10px 10px;
-  letter-spacing: 20px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .text-container p {
+  font-family: var(--mainFont);
   color: #ffffffe3;
   font-size: 20px;
   padding: 10px 10px 10px 10px;
-  text-align: center;
 }
 
 .input-container {
   text-align: center;
   margin: 0 auto;
-  display: block;
 }
 
 .bridge-list-container {
@@ -242,8 +242,9 @@ body {
   opacity: 50%;
 }
 
-.collected-card {
-  background-color: #e6e1e1;
+.collected-card-unseen {
+  position: absolute;
+  background-color: red;
   margin: auto 0;
   width: 140px;
   height: 200px;
@@ -251,12 +252,51 @@ body {
   align-self: center;
   -ms-grid-column-align: center;
   justify-self: center;
-  margin-top: 10px;
-  border: 3px black dotted;
   display: flex;
   justify-content: center;
-  opacity: 50%;
+  transform: rotate(10deg);
+  transition: 1sec;
 }
+.collected-card-unseen h1{
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  background-color: #e6e1e1;
+}
+
+.collected-card-seen h1{
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  background-color: #09ff00;
+}
+
+.collected-card-seen p{
+  font-size: 12px;
+  padding: 5px 0px 0px 5px;
+  color: #e6e1e1;
+}
+
+.collected-card-unseen p{
+  font-size: 12px;
+  padding: 5px 0px 0px 5px;
+  color: #e6e1e1;
+}
+
+
+.collected-card-seen {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  margin: auto 0;
+  width: 140px;
+  height: 200px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  transform: rotate(0deg);
+}
+
 
 .inner-empty-card {
   border: 3px black dotted;
@@ -273,7 +313,7 @@ body {
 }
 
 .collected-card-visible {
-  background-color: white;
+  background-color: blue;
   margin: auto 0;
   width: 140px;
   height: 200px;
@@ -309,6 +349,7 @@ nav {
   padding-bottom: 12px;
   padding-top: 10px;
   padding-left: 5px;
+  text-decoration: none;
 }
 
 
@@ -317,6 +358,7 @@ nav ul {
   margin: 0;
   list-style: none;
   display: flex;
+  text-decoration: none;
 }
 
 nav li {
@@ -333,7 +375,10 @@ nav li {
   cursor: pointer;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 12px;
 }
+
+
 
 nav li:hover {
 opacity: 0.7;
@@ -502,19 +547,19 @@ display: none;
 }
 
 .btn-add {
-    background-color:transparent;
-    border-radius:28px;
-    border:1px solid #000000;
-    cursor:pointer;
-    color:#000000;
-    font-family:var(--cardFont);
-    font-size:12px;
-    padding:12px 21px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #00e913;
-    margin: 10px;
-    letter-spacing: 2px;
-  }
+  background-color:transparent;
+  border-radius:28px;
+  border:1px solid #000000;
+  cursor:pointer;
+  color:#000000;
+  font-family:var(--cardFont);
+  font-size:12px;
+  padding:12px 21px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #00e913;
+  margin: 10px;
+  letter-spacing: 2px;
+}
 
 .btn-cancel {
   background-color:transparent;
