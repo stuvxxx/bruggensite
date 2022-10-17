@@ -16,9 +16,8 @@ function Header() {
                    Hier onder vind je kaartjes van elke brug van Amsterdam. Als je een brug hebt bezocht kan je 
                    op de titel drukken en m aan je collectie toevoegen!
                    <br></br>
-                   Deze site deel van mijn portfolio, ik ben een 
-                   startende Front-End developer. 
-                   Voor meer info zie:contact hieronder!
+                   De site is deel van mijn portefolio en er wordt nog aan gewerkt. Ik heb nog veel te leren en kan
+                    niet wachten om daar stappen in te zetten!
                    <br></br>
                    <br></br>
                    <br></br>

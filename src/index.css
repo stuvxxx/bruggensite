@@ -21,6 +21,9 @@ body {
   background: linear-gradient(to right, #213d28 0%, #2F3E31 100%);
 }
 
+
+
+
 .header-container {
   background: url("brug2.jpg");
   background-size: cover;
@@ -32,8 +35,6 @@ body {
 
 .text-container {
   background-color: #00000094;
-  padding-top: 100px; 
-  padding-bottom: 100px; 
 }
 
 .text-container h1 {
@@ -50,6 +51,7 @@ body {
   color: #ffffffe3;
   font-size: 20px;
   padding: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .input-container {
@@ -415,26 +417,12 @@ margin-right: 0;
 
 
 .rate-no-show {
-  position: fixed;
-  background-color: var(--card1);
-  margin: 0 auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80%;
-  width: 70%;
-  z-index: -10;
-  border-radius: 5%;
   visibility: hidden;
-  -webkit-transition: visibility 1s linear;
-    -moz-transition: visibility 1s linear;
-    -o-transition: visibility 1s linear;
-    transition: visibility 1s linear
+  position: absolute;
 }
 
 .rate-show {
-  position: fixed;
+  visibility:visible;
   background-color: var(--card1);
   margin: 0 auto;
   position: fixed;
@@ -443,9 +431,8 @@ margin-right: 0;
   transform: translate(-50%, -50%);
   height: 80%;
   width: 70%;
-  z-index: 2;
+  z-index: 200;
   border-radius: 5%;
-  visibility:visible;
   -webkit-transition: visibility 1s linear;
     -moz-transition: visibility 1s linear;
     -o-transition: visibility 1s linear;

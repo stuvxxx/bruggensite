@@ -1,8 +1,4 @@
-import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCamera, faXmarksLines, faRotate} from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
-import { Link } from "react-router-dom"
 
 
 
