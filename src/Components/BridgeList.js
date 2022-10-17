@@ -85,9 +85,7 @@ function BridgeList(props) {
     useEffect(() => {
         props.func(inCollection, fullData)
     })
-
-
-
+ 
     return (
         <div>
         <div className="input-container">
